@@ -14,5 +14,5 @@ for (let i = 0; i < ingredients.length; i++) {
   arr.push(li);
 }
 
-const ul = document.querySelector("ul");
-ul.prepend(...arr);
+const ulRef = document.querySelector("ul#ingredients");
+ulRef.prepend(...arr);
