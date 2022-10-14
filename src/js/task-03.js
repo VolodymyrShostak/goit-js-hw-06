@@ -14,16 +14,15 @@ const images = [
 ];
 
 const ulRef = document.querySelector(".gallery");
-
-const arr = [];
-for (let i = 0; i < images.length; i++) {
-  const li = document.createElement("li");
-  const img = document.createElement("img");
-  img.src = images[i].url;
-  img.alt = images[i].alt;
-  li.append(img);
-  arr.push(li);
-  console.log(arr);
-}
-
-ulRef.prepend(...arr);
+const temlate = images.reduce(
+  (prev, { url, alt }) =>
+    prev +
+    `
+<li class="item">
+  <img src="${url}" alt="${alt}">
+</li>
+`,
+  ""
+);
+console.log(temlate);
+ulRef.insertAdjacentHTML("afterbegin", temlate);
