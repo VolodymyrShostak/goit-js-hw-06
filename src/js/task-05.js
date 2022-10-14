@@ -8,5 +8,3 @@ inField.addEventListener("input", (e) => {
     outField.textContent = `Anonymous`;
   }
 });
-
-outField.textContent;
