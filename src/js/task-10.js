@@ -4,7 +4,7 @@ const destRef = document.querySelector("[data-destroy]");
 const boxes = document.getElementById("boxes");
 
 inRef.addEventListener("input", (e) => {
-  const amount = e.currentTarget.value;
+  let amount = e.currentTarget.value;
 
   crtRef.addEventListener("click", (e) => {
     let size = 30;
@@ -19,9 +19,11 @@ inRef.addEventListener("input", (e) => {
         return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
       }
     }
+    amount = 0;
   });
 });
 destRef.addEventListener("click", destroyBoxes);
 function destroyBoxes() {
   boxes.innerHTML = "";
+  inRef.value = "";
 }
