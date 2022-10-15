@@ -18,8 +18,8 @@ const temlate = images.reduce(
   (prev, { url, alt }) =>
     prev +
     `
-<li class="item">
-  <img src="${url}" alt="${alt}">
+<li class="item" >
+  <img src="${url}" alt="${alt}" style="width: 100%; borderRadius: 20px">
 </li>
 `,
   ""
