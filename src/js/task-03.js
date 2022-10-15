@@ -24,5 +24,4 @@ const temlate = images.reduce(
 `,
   ""
 );
-console.log(temlate);
 ulRef.insertAdjacentHTML("afterbegin", temlate);
