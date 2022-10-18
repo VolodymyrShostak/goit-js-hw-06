@@ -15,15 +15,17 @@ inRef.addEventListener("input", (e) => {
       div.style.backgroundColor = getRandomHexColor();
       boxes.append(div);
       size += 10;
-      function getRandomHexColor() {
-        return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-      }
     }
     amount = 0;
   });
+  function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  }
 });
+
 destRef.addEventListener("click", destroyBoxes);
 function destroyBoxes() {
   boxes.innerHTML = "";
   inRef.value = "";
 }
+// function getRandomHexColor() { return `#${Math.floor(Math.random() * 16777215).toString(16)}`; }  - краще зробити як окрему функцію, тобто винести за межі поточної.
