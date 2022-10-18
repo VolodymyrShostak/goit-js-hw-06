@@ -7,9 +7,9 @@ const body = document.querySelector(`body`);
 
 btnChangeColor.addEventListener(`click`, changeColor);
 function changeColor(e) {
-  function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  }
-  body.style.backgroundColor = getRandomHexColor();
-  nmbColor.textContent = getRandomHexColor();
+  body.style.backgroundColor = getColor();
+  nmbColor.textContent = getColor();
 }
+const getColor = function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+};
